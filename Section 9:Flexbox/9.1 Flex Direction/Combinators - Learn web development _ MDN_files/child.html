@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)https://mdn.github.io/css-examples/learn/selectors/child.html -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width">
+    <title>Selectors: Child combinator</title>
+    <link rel="stylesheet" href="./styles.css">
+    <style></style>
+
+    <style class="editable">ul > li {
+  border-top: 5px solid red;
+}</style>
+  </head>
+
+  <body>
+    <section class="preview"><ul>
+  <li>Unordered item</li>
+  <li>Unordered item
+    <ol>
+      <li>Item 1</li>
+      <li>Item 2</li>
+    </ol>
+  </li>
+</ul></section>
+
+    <h4>Interactive editor</h4><textarea class="playable playable-css" style="height: 80px">ul &gt; li {
+  border-top: 5px solid red;
+}</textarea>
+
+    <textarea class="playable playable-html" style="height: 160px">&lt;ul&gt;
+  &lt;li&gt;Unordered item&lt;/li&gt;
+  &lt;li&gt;Unordered item
+    &lt;ol&gt;
+      &lt;li&gt;Item 1&lt;/li&gt;
+      &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</textarea>
+
+    <div class="playable-buttons">
+      <input id="reset" type="button" value="Reset">
+    </div>
+  
+  <script src="./playable.js"></script>
+
+</body></html>
