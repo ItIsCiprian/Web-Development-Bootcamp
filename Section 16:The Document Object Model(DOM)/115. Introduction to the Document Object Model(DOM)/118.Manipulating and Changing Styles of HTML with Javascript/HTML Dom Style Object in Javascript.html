@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DOM Style Object Example</title>
+  </head>
+  <body>
+    <h1 id="myHeading">Hello, World!</h1>
+    <button id="changeStyleButton">Change Style</button>
+
+    <script>
+      // Function to change the style of an element
+      function changeElementStyle() {
+        // Get the element by its ID
+        var heading = document.getElementById("myHeading");
+
+        // Change various style properties
+        heading.style.color = "blue"; // Change text color to blue
+        heading.style.backgroundColor = "yellow"; // Change background color to yellow
+        heading.style.padding = "10px"; // Add padding
+        heading.style.border = "1px solid black"; // Add a black border
+        heading.style.fontSize = "24px"; // Increase font size
+        heading.style.textAlign = "center"; // Center the text
+      }
+
+      // Add an event listener to the button
+      document
+        .getElementById("changeStyleButton")
+        .addEventListener("click", changeElementStyle);
+    </script>
+  </body>
+</html>
