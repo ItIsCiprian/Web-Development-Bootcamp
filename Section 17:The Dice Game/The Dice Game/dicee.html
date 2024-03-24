@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+<head>
+    <!-- Meta Tags -->
     <meta charset="utf-8" />
-    <title>Dicee</title>
+    
+    <!-- Page Title -->
+    <title>Dicee Game</title>
+    
+    <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet" />
+</head>
+<body>
     <div class="container">
-      <h1>Refresh Me</h1>
-
-      <div class="dice">
-        <p>Player 1</p>
-        <img class="img1" src="" />
-      </div>
-
-      <div class="dice">
-        <p>Player 2</p>
-        <img class="img2" src="" />
-      </div>
+        <!-- Game Title -->
+        <h1>Refresh Me</h1>
+        
+        <!-- Player 1 Dice Roll -->
+        <div class="dice">
+            <p>Player 1</p>
+            <!-- The src attribute of the img tag will be dynamically updated by JavaScript to show the dice roll result -->
+            <img class="img1" src="" alt="Player 1 Dice" />
+        </div>
+        
+        <!-- Player 2 Dice Roll -->
+        <div class="dice">
+            <p>Player 2</p>
+            <!-- Similarly, the src attribute will be updated to show Player 2's dice roll -->
+            <img class="img2" src="" alt="Player 2 Dice" />
+        </div>
     </div>
-
+    
+    <!-- Footer -->
     <footer>www 🎲 App Brewery 🎲 com</footer>
-  </body>
+</body>
 </html>
