@@ -1,29 +1,63 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <title>Dicee</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <h1>Refresh Me</h1>
+/* General reset and base styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-      <div class="dice">
-        <p>Player 1</p>
-        <img class="img1" src="" />
-      </div>
+/* Font imports */
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Lobster');
 
-      <div class="dice">
-        <p>Player 2</p>
-        <img class="img2" src="" />
-      </div>
-    </div>
+/* Base page styling */
+body {
+  font-family: 'Lobster', cursive;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-    <footer>www 🎲 App Brewery 🎲 com</footer>
-  </body>
-</html>
+/* Container for dice game elements */
+.container {
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+/* Title styling */
+.container > h1 {
+  font-family: 'Indie Flower', cursive;
+  color: #333;
+}
+
+/* Dice section styling */
+.dice {
+  margin: 20px;
+}
+
+/* Player identifier styling */
+.dice > p {
+  font-size: 20px;
+  color: #666;
+}
+
+/* Dice image styling */
+img {
+  width: 100px; /* Adjust as needed */
+  height: 100px; /* Adjust to keep the aspect ratio */
+}
+
+/* Footer styling */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-family: 'Indie Flower', cursive;
+  background-color: #eee;
+  border-top: 1px solid #ccc;
+}
