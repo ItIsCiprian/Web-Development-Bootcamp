@@ -1,39 +1,43 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <!-- Meta Tags -->
-    <meta charset="utf-8" />
-    
-    <!-- Page Title -->
-    <title>Dicee Game</title>
-    
-    <!-- CSS Stylesheets -->
-    <link rel="stylesheet" href="styles.css" />
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet" />
+  <meta charset="utf-8">
+  <title>Dicee</title>
+  <!-- Link to external CSS for styling -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Import Google fonts for use in the application -->
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <!-- Game Title -->
-        <h1>Refresh Me</h1>
-        
-        <!-- Player 1 Dice Roll -->
-        <div class="dice">
-            <p>Player 1</p>
-            <!-- The src attribute of the img tag will be dynamically updated by JavaScript to show the dice roll result -->
-            <img class="img1" src="" alt="Player 1 Dice" />
-        </div>
-        
-        <!-- Player 2 Dice Roll -->
-        <div class="dice">
-            <p>Player 2</p>
-            <!-- Similarly, the src attribute will be updated to show Player 2's dice roll -->
-            <img class="img2" src="" alt="Player 2 Dice" />
-        </div>
+
+  <!-- Main container for the dice game -->
+  <div class="container">
+    <!-- Heading indicating the action to refresh the dice -->
+    <h1>Refresh Me</h1>
+
+    <!-- Section for player 1's dice roll -->
+    <div class="dice">
+      <p>Player 1</p>
+      <!-- Image showing player 1's dice; default is dice number 6 -->
+      <img class="img1" src="images/dice6.png" alt="Player 1 Dice">
     </div>
-    
-    <!-- Footer -->
-    <footer>www 🎲 App Brewery 🎲 com</footer>
+
+    <!-- Section for player 2's dice roll -->
+    <div class="dice">
+      <p>Player 2</p>
+      <!-- Image showing player 2's dice; default is dice number 6 -->
+      <img class="img2" src="images/dice6.png" alt="Player 2 Dice">
+    </div>
+
+  </div>
+
+  <!-- JavaScript file that handles the dice rolling logic -->
+  <script src="index.js" charset="utf-8"></script>
+
 </body>
+
+<!-- Footer containing the copyright or brand information -->
+<footer>
+  www 🎲 App Brewery 🎲 com
+</footer>
 </html>
