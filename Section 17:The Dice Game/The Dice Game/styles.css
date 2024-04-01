@@ -1,63 +1,46 @@
-/* General reset and base styles */
-body, html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Font imports */
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Lobster');
-
-/* Base page styling */
-body {
-  font-family: 'Lobster', cursive;
-  background-color: #f7f7f7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-/* Container for dice game elements */
+/* Base container styles for centering and sizing the content */
 .container {
-  text-align: center;
-  box-shadow: 0 0 20px rgba(0,0,0,0.15);
-  padding: 20px;
-  border-radius: 10px;
-  background-color: white;
+  width: 70%;
+  margin: auto; /* Centers the container within the parent */
+  text-align: center; /* Aligns text in the center of the container */
 }
 
-/* Title styling */
-.container > h1 {
-  font-family: 'Indie Flower', cursive;
-  color: #333;
-}
-
-/* Dice section styling */
+/* Style rules for the dice containers */
 .dice {
-  margin: 20px;
+  display: inline-block; /* Allows dice to sit side by side */
+  text-align: center; /* Ensures the content inside each dice is centered */
 }
 
-/* Player identifier styling */
-.dice > p {
-  font-size: 20px;
-  color: #666;
+/* Overall body styles to set the background color and base font */
+body {
+  background-color: #393E46; /* Dark slate gray background for contrast */
 }
 
-/* Dice image styling */
+/* Heading styles for the main title of the page */
+h1 {
+  margin: 30px; /* Spacing around the heading */
+  font-family: 'Lobster', cursive; /* Fancy, cursive font for the heading */
+  text-shadow: 5px 0 #232931; /* Shadow effect for depth */
+  font-size: 8rem; /* Large font size for emphasis */
+  color: #4ECCA3; /* Mint green color for a pop of vibrancy */
+}
+
+/* Paragraph styles for player labels and other text */
+p {
+  font-size: 2rem; /* Moderate size for readability */
+  color: #4ECCA3; /* Mint green color to match the heading */
+  font-family: 'Indie Flower', cursive; /* Casual, readable cursive font */
+}
+
+/* Image styles for scaling the dice images */
 img {
-  width: 100px; /* Adjust as needed */
-  height: 100px; /* Adjust to keep the aspect ratio */
+  width: 80%; /* Scales the image to fit its container while maintaining aspect ratio */
 }
 
-/* Footer styling */
+/* Footer styles for the page's bottom section */
 footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  padding: 10px;
-  font-family: 'Indie Flower', cursive;
-  background-color: #eee;
-  border-top: 1px solid #ccc;
+  margin-top: 5%; /* Spacing between the content and the footer */
+  color: #EEEEEE; /* Light gray color for the text for readability */
+  text-align: center; /* Center-aligns the footer text */
+  font-family: 'Indie Flower', cursive; /* Consistent cursive font with the paragraphs */
 }
