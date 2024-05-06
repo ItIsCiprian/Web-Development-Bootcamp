@@ -1,46 +1,41 @@
-/* Base container styles for centering and sizing the content */
 .container {
   width: 70%;
-  margin: auto; /* Centers the container within the parent */
-  text-align: center; /* Aligns text in the center of the container */
+  margin: auto;
+  text-align: center;
 }
 
-/* Style rules for the dice containers */
 .dice {
-  display: inline-block; /* Allows dice to sit side by side */
-  text-align: center; /* Ensures the content inside each dice is centered */
+  text-align: center;
+  display: inline-block;
+
 }
 
-/* Overall body styles to set the background color and base font */
 body {
-  background-color: #393E46; /* Dark slate gray background for contrast */
+  background-color: #393E46;
 }
 
-/* Heading styles for the main title of the page */
 h1 {
-  margin: 30px; /* Spacing around the heading */
-  font-family: 'Lobster', cursive; /* Fancy, cursive font for the heading */
-  text-shadow: 5px 0 #232931; /* Shadow effect for depth */
-  font-size: 8rem; /* Large font size for emphasis */
-  color: #4ECCA3; /* Mint green color for a pop of vibrancy */
+  margin: 30px;
+  font-family: 'Lobster', cursive;
+  text-shadow: 5px 0 #232931;
+  font-size: 8rem;
+  color: #4ECCA3;
 }
 
-/* Paragraph styles for player labels and other text */
 p {
-  font-size: 2rem; /* Moderate size for readability */
-  color: #4ECCA3; /* Mint green color to match the heading */
-  font-family: 'Indie Flower', cursive; /* Casual, readable cursive font */
+  font-size: 2rem;
+  color: #4ECCA3;
+  font-family: 'Indie Flower', cursive;
 }
 
-/* Image styles for scaling the dice images */
 img {
-  width: 80%; /* Scales the image to fit its container while maintaining aspect ratio */
+  width: 80%;
 }
 
-/* Footer styles for the page's bottom section */
 footer {
-  margin-top: 5%; /* Spacing between the content and the footer */
-  color: #EEEEEE; /* Light gray color for the text for readability */
-  text-align: center; /* Center-aligns the footer text */
-  font-family: 'Indie Flower', cursive; /* Consistent cursive font with the paragraphs */
+  margin-top: 5%;
+  color: #EEEEEE;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+
 }

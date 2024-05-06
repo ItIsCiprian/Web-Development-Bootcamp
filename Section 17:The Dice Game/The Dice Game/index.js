@@ -1,32 +1,29 @@
-// Generate a random number between 1 and 6 for the first dice roll
-var randomNumber1 = Math.floor(Math.random() * 6) + 1;
 
-// Construct the file name for the first dice based on the random number
-var randomDiceImage1 = "dice" + randomNumber1 + ".png"; // e.g., dice1.png
+var randomNumber1 = Math.floor(Math.random() * 6) + 1; //1-6
 
-// Create the file path for the first dice's image
-var randomImageSource1 = "images/" + randomDiceImage1; // e.g., images/dice1.png
+var randomDiceImage = "dice" + randomNumber1 + ".png"; //dice1.png - dice6.png
 
-// Select the first dice image element on the page
-var firstDiceImage = document.querySelector("img.img1");
+var randomImageSource = "images/" + randomDiceImage; //images/dice1.png - images/dice6.png
 
-// Update the source attribute of the first dice image to show the correct dice roll
-firstDiceImage.setAttribute("src", randomImageSource1);
+var image1 = document.querySelectorAll("img")[0];
 
-// Repeat the process for the second dice roll
+image1.setAttribute("src", randomImageSource);
+
+
 var randomNumber2 = Math.floor(Math.random() * 6) + 1;
-var randomImageSource2 = "images/dice" + randomNumber2 + ".png"; // e.g., images/dice2.png
-var secondDiceImage = document.querySelector("img.img2");
-secondDiceImage.setAttribute("src", randomImageSource2);
 
-// Determine the game outcome based on the two random numbers
+var randomImageSource2 = "images/dice" + randomNumber2 + ".png";
+
+document.querySelectorAll("img")[1].setAttribute("src", randomImageSource2);
+
+
+//If player 1 wins
 if (randomNumber1 > randomNumber2) {
-  // If the first dice roll is higher, player 1 wins
-  document.querySelector("h1").textContent = "🚩 Player 1 Wins!";
-} else if (randomNumber2 > randomNumber1) {
-  // If the second dice roll is higher, player 2 wins
-  document.querySelector("h1").textContent = "Player 2 Wins! 🚩";
-} else {
-  // If both dice rolls are the same, it's a draw
-  document.querySelector("h1").textContent = "Draw!";
+  document.querySelector("h1").innerHTML = "🚩 Play 1 Wins!";
+}
+else if (randomNumber2 > randomNumber1) {
+  document.querySelector("h1").innerHTML = "Player 2 Wins! 🚩";
+}
+else {
+  document.querySelector("h1").innerHTML = "Draw!";
 }
