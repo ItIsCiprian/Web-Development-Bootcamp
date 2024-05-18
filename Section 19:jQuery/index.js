@@ -1,2 +1,2 @@
-$("h1").addClass("big-title");
-$("button");
+$("h1").text("Bye");
+$("button").html("<em>Hey</em>");
