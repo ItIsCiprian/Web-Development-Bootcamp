@@ -1,8 +1,11 @@
-.big-title {
-  font-size: 10rem;
-  color: yellow;
-  font-family: cursive;
+:root {
+  --main-font-size: 5rem; /* Adjustable based on design needs */
+  --main-font-family: "Comic Sans MS", cursive, sans-serif;
+  --main-color: #ffcc00; /* A yellow shade with better contrast */
 }
 
-
-
+.big-title {
+  font-size: var(--main-font-size);
+  color: var(--main-color);
+  font-family: var(--main-font-family);
+}
