@@ -18,7 +18,7 @@ app.post("/register", (req, res) => {
   res.sendStatus(201);
 });
 
-app.put("/user/ionutcipriananecu", (req, res) => {
+app.put("/user/ionutcipriananescu", (req, res) => {
   res.sendStatus(200);
 });
 
