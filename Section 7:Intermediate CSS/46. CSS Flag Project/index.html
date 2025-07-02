@@ -1,3 +1,4 @@
+<!-- This HTML file creates a CSS-based flag of Laos. -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,14 +6,16 @@
   <meta charset="UTF-8">
   <title>CSS Flag Project</title>
   <style>
+    /* Styles for the main flag container. */
     .flag {
       width: 900px;
       height: 600px;
       position: relative;
-      background-color: #CE1126;
+      background-color: #CE1126; /* Red part of the flag. */
 
     }
 
+    /* Styles for the blue stripe in the middle of the flag. */
     .flag > div {
       background-color: #002868;
       height: 300px;
@@ -21,17 +24,19 @@
       top: 150px;
     }
 
+    /* Styles for the white circle in the center of the blue stripe. */
     .flag > div > div {
       background-color: white;
       position: absolute;
 
       height: 200px;
       width: 200px;
-      border-radius: 50%;
+      border-radius: 50%; /* Makes it a circle. */
       top: 50px;
       left: 350px;
     }
 
+    /* General paragraph styles. */
     p {
       font-size: 5rem;
       color: white;
@@ -40,6 +45,7 @@
       margin: 0;
     }
 
+    /* Styles for the text inside the white circle. */
     .flag>div div p {
       color: black;
     }
@@ -47,6 +53,7 @@
 </head>
 
 <body>
+  <!-- The main flag structure. -->
   <div class="flag">
     <p>The Flag</p>
     <div>

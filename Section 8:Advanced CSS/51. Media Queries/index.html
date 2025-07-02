@@ -1,42 +1,41 @@
+<!-- This HTML file demonstrates the use of CSS Media Queries to change background color based on screen width. -->
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- 
-TODO: Change the background color for each device
-[lightsalmon] Mobile Devices: 319px — 480px
-[powderblue] iPads and Tablets: 481px — 1200px
-[limegreen] Laptops: 1201px — 1600px
-[seagreen] Desktops: 1601px and more
--->
-
 <head>
   <meta charset="UTF-8">
+  <!-- Sets the viewport for responsive design. -->
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 
   <title>Document</title>
   <style>
+    /* Default background color for the body. */
     body {
       background-color: aquamarine;
     }
 
+    /* Media query for mobile devices (319px - 480px). */
     @media (min-width: 319px) and (max-width: 480px) {
       body {
         background-color: lightsalmon;
       }
     }
 
+    /* Media query for iPads and tablets (481px - 1200px). */
     @media (min-width: 481px) and (max-width: 1200px) {
       body {
         background-color: powderblue;
       }
     }
 
+    /* Media query for laptops (1201px - 1600px). */
     @media (min-width: 1201px) and (max-width: 1600px) {
       body {
         background-color: limegreen;
       }
     }
 
+    /* Media query for desktops (1601px and more). */
     @media (min-width: 1601px) {
       body {
         background-color: seagreen;

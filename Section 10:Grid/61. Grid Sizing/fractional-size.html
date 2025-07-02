@@ -1,3 +1,4 @@
+<!-- This HTML file demonstrates fractional sizing in CSS Grid. -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,12 +8,14 @@
   <title>Fractional Size Grid</title>
   <style>
 
+    /* Styles for the grid container: enables grid display, and sets row and column sizes using fractional units (fr). */
     .grid-container {
       display: grid;
       grid-template-rows: 1fr 2fr;
       grid-template-columns: 1fr 2fr;
     }
 
+    /* Styles for grid items: sets font size, background color, border, and text color. */
     .grid-item {
       font-size: 3rem;
       background-color: darkviolet;
@@ -24,6 +27,7 @@
 
 <body>
   <h1>Fractional Size Grid</h1>
+  <!-- Grid container with four grid items. -->
   <div class="grid-container">
     <div class="grid-item">1</div>
     <div class="grid-item">2</div>

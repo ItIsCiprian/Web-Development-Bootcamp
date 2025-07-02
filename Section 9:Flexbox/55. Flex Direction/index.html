@@ -1,3 +1,4 @@
+<!-- This HTML file demonstrates the CSS flex-direction property. -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flex Direction</title>
   <style>
+    /* Styles for the flex container: sets text color, border, display to inline-flex, and flex direction to column. */
     .container {
       color: white;
       border: 5px solid gold;
@@ -13,10 +15,12 @@
       flex-direction: column;
     }
 
+    /* Sets the initial main size of flex items to 100px. */
     .container > * {
       flex-basis: 100px;
     }
 
+    /* Individual background colors for each flex item. */
     .red {
       background-color: #eb4d4b;
     }
@@ -48,6 +52,7 @@
 </head>
 
 <body>
+  <!-- Flex container with multiple colored div elements as flex items. -->
   <div class="container">
     <div class="red">Red</div>
     <div class="orange">Orange</div>

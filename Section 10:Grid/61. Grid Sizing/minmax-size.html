@@ -1,3 +1,4 @@
+<!-- This HTML file demonstrates minmax sizing in CSS Grid. -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,12 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MizMax Size Grid</title>
   <style>
+    /* Styles for the grid container: enables grid display, and sets row and column sizes using minmax. */
     .grid-container {
       display: grid;
       grid-template-rows: 200px minmax(400px, 5fr);
       grid-template-columns: 200px minmax(400px, 5fr);
     }
 
+    /* Styles for grid items: sets font size, background color, border, and text color. */
     .grid-item {
       font-size: 3rem;
       background-color: darkviolet;
@@ -23,6 +26,7 @@
 
 <body>
   <h1>MinMax Size Grid</h1>
+  <!-- Grid container with four grid items. -->
   <div class="grid-container">
     <div class="grid-item">1</div>
     <div class="grid-item">2</div>

@@ -1,3 +1,4 @@
+/* Styles for the body: sets font family, margins, background color, and enables flexbox for vertical layout. */
 body {
   font-family: "Poppins", sans-serif;
   margin: 50px 50px 0 50px;
@@ -6,51 +7,63 @@ body {
   flex-direction: column;
   min-height: 95vh;
 }
+/* Allows the main content to grow and take available space. */
 .main {
   flex: 1;
 }
 
+/* Styles for the main heading. */
 h1 {
   font-size: 5rem;
 }
 
+/* Styles for the footer: aligns text to the right and sets text color. */
 footer {
   text-align: right;
   color: midnightblue;
 }
 
+/* Styles for tile images: sets height, floats left, and adds right margin. */
 .tile-image {
   height: 200px;
   float: left;
   margin-right: 50px;
 }
 
+/* Styles for cards: sets width. */
 .card {
   width: 45%;
 }
 
+/* Floats the left card to the left. */
 .left {
   float: left;
 }
 
+/* Floats the right card to the right. */
 .right {
   float: right;
 }
 
+/* Styles for the creative span: sets text color. */
 .creative {
   color: midnightblue;
 }
 
+/* Media query for screens with a maximum width of 680px (for responsiveness). */
 @media (max-width: 680px) {
+  /* Adjusts logo width for smaller screens. */
   .logo {
     width: 100px;
   }
 
+  /* Adjusts heading font size and text alignment for smaller screens. */
   h1 {
     font-size: 3.5rem;
     text-align: center;
   }
 
+  /* Adjusts card width, display, margin, and text alignment for smaller screens. */
   .card {
     width: 100%;
     display: block;
@@ -58,6 +71,7 @@ footer {
     text-align: justify;
   }
 
+  /* Adjusts image width, display, and object-fit for smaller screens. */
   .card img {
     margin-bottom: 10px;
     width: 100%;

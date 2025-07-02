@@ -1,22 +1,27 @@
+/* Styles for the outer box: sets the background color to purple. */
 #outer-box {
   background-color: purple;
 }
 
+/* Styles for all elements with the class 'box': sets background color to blue and adds padding. */
 .box {
   background-color: blue;
   padding: 10px;
 }
 
+/* Styles for elements with the class 'inner-box': sets background color to red. */
 .inner-box {
   background-color: red;
 }
 
+/* Styles for all paragraph elements: sets text color to yellow and removes default margin and padding. */
 p {
   color: yellow;
   margin: 0;
   padding: 0;
 }
 
+/* Styles for elements with the class 'white-text': sets text color to white. */
 .white-text {
   color: white;
 }

@@ -1,9 +1,11 @@
+<!-- This HTML file demonstrates CSS positioning properties. -->
 <!DOCTYPE html>
 <html>
 
 <head>
   <title>CSS Positioning Exercise</title>
   <style>
+    /* Styles for the red circle: sets dimensions, background color, border-radius for a circle, and absolute positioning. */
     .red-circle {
       width: 200px;
       height: 200px;
@@ -14,6 +16,7 @@
       left: 250px;
     }
     
+    /* Styles for the blue box: sets dimensions, background color, and relative positioning. */
     .blue-box {
       background-color: blue;
       width: 500px;
@@ -27,7 +30,9 @@
 </head>
 
 <body>
+  <!-- The blue box, acting as a positioning context for the red circle. -->
   <div class="blue-box">
+    <!-- The red circle, positioned absolutely within the blue box. -->
     <div class="red-circle"></div>
   </div>
 </body>

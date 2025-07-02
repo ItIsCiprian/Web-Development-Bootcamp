@@ -1,3 +1,4 @@
+<!-- This HTML file demonstrates the CSS float property. -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,29 +6,35 @@
   <meta charset="UTF-8">
   <title>CSS Float</title>
   <style>
+    /* Styles for div elements: sets display to inline-block and width to 40%. */
     div {
       display: inline-block;
       width: 40%;
     }
 
+    /* Styles for paragraph elements: sets font size to 2em. */
     p {
       font-size: 2em;
     }
 
+    /* Styles for the cat section: floats left and sets background color. */
     .cat {
       float: left;
       background-color: aquamarine;
     }
 
+    /* Styles for the dog section: floats right and sets background color. */
     .dog {
       float: right;
       background-color: coral;
     }
 
+    /* Styles for images: floats left. */
     img {
       float: left;
     }
 
+    /* Styles for the footer: clears floats, centers text, and sets background color. */
     footer {
       clear: both;
       text-align: center;
@@ -37,6 +44,7 @@
 </head>
 
 <body>
+  <!-- Cat section with an image and text, floated left. -->
   <div class="cat">
     <h2>CatCSS</h2>
 
@@ -49,6 +57,7 @@
       bad gnaw the corn cob.</p>
   </div>
 
+  <!-- Dog section with an image and text, floated right. -->
   <div class="dog">
     <h2>DogCSS</h2>
     <img src="dog.jpeg" alt="dogs in a box" />
@@ -59,6 +68,7 @@
       frighten.</p>
   </div>
 
+  <!-- Footer section, cleared from floats. -->
   <footer>Copyright. This is the footer</footer>
 </body>
 

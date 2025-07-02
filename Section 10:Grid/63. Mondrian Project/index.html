@@ -1,3 +1,4 @@
+<!-- This HTML file creates a Mondrian-style painting using CSS Grid. -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,6 +16,7 @@
     Blue: #004592
     Yellow: #F9D01E
     */
+    /* Centers the container on the page using flexbox. */
     body {
       display: flex;
       justify-content: center;
@@ -24,6 +26,7 @@
       padding: 0;
     }
 
+    /* Styles for the main grid container: sets dimensions, background color (for lines), enables grid display, defines column and row templates, and sets gap. */
     .container {
       height: 748px;
       width: 748px;
@@ -34,39 +37,48 @@
       gap: 9px;
     }
 
+    /* Default background color for grid items (white). */
     .item {
       background-color: #F0F1EC;
     }
 
+    /* Styles for the red item. */
     .red {
       background-color: #E72F24;
     }
 
+    /* Styles for the first white item: spans 3 columns. */
     .white1 {
       grid-column: span 3;
     }
 
+    /* Styles for the second white item: spans 2 rows. */
     .white2 {
       grid-row: span 2;
     }
 
+    /* Styles for the third white item: places it using grid-area. */
     .white3 {
       grid-area: 2 / 2 / 4 /4
     }
 
+    /* Styles for the blue item: sets background color and adds a black bottom border. */
     .blue {
       background-color: #004592;
       border-bottom: 10px solid #000;
     }
 
+    /* Styles for the fourth white item: spans 2 rows. */
     .white4 {
       grid-row: span 2;
     }
 
+    /* Styles for the yellow item. */
     .yellow {
       background-color: #F9D01E;
     }
 
+    /* Styles for the black item. */
     .black {
       background-color: #232629;
     }
@@ -74,9 +86,9 @@
 </head>
 
 <body>
-  <!-- Write your HTML here -->
-
+  <!-- Main container for the Mondrian painting. -->
   <div class="container">
+    <!-- Grid items representing different colored blocks. -->
     <div class="item red"></div>
     <div class="item white1"></div>
     <div class="item white2"></div>

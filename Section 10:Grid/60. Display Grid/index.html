@@ -1,9 +1,11 @@
+<!-- This HTML file creates a chessboard pattern using CSS Grid. -->
 <!DOCTYPE html>
 <html>
 
 <head>
   <title>Chessboard</title>
   <style>
+    /* Styles for the main container: sets width and enables grid display with 8 equal columns and rows. */
     .container {
       width: 800px;
       display: grid;
@@ -11,12 +13,14 @@
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     }
 
+    /* Styles for white squares: sets dimensions and background color. */
     .white {
       height: 100px;
       width: 100px;
       background-color: #f0d9b5;
     }
 
+    /* Styles for black squares: sets dimensions and background color. */
     .black {
       height: 100px;
       width: 100px;
@@ -26,7 +30,9 @@
 </head>
 
 <body>
+  <!-- Grid container representing the chessboard. -->
   <div class="container">
+    <!-- Individual div elements representing the squares of the chessboard. -->
     <div class="white"></div>
     <div class="black"></div>
     <div class="white"></div>

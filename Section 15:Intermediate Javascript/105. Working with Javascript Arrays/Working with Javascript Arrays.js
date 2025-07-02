@@ -1,29 +1,33 @@
-var output = []; // Initialize an empty array to hold the FizzBuzz output
-var count = 1; // Start counting from 1
+// Initialize an empty array to store the FizzBuzz sequence.
+var output = [];
+// Initialize a counter variable, starting from 1.
+var count = 1;
 
+// Define the fizzBuzz function.
 function fizzBuzz() {
-  // Check if 'count' is divisible by both 3 and 5 (i.e., 15, 30, etc.)
+  // Check if the current count is divisible by both 3 and 5.
   if (count % 3 === 0 && count % 5 === 0) {
-    output.push("FizzBuzz"); // Add "FizzBuzz" to the array
+    output.push("FizzBuzz"); // If true, add "FizzBuzz" to the output array.
   }
-  // Check if 'count' is divisible by 3
+  // Else, check if the current count is divisible by 3.
   else if (count % 3 === 0) {
-    output.push("Fizz"); // Add "Fizz" to the array
+    output.push("Fizz"); // If true, add "Fizz" to the output array.
   }
-  // Check if 'count' is divisible by 5
+  // Else, check if the current count is divisible by 5.
   else if (count % 5 === 0) {
-    output.push("Buzz"); // Add "Buzz" to the array
+    output.push("Buzz"); // If true, add "Buzz" to the output array.
   }
-  // If 'count' is not divisible by 3 or 5
+  // If none of the above conditions are met.
   else {
-    output.push(count); // Add the number itself to the array
+    output.push(count); // Add the current count (number) to the output array.
   }
-  count++; // Increment 'count' for the next function call
+  count++; // Increment the counter for the next iteration.
 }
 
-// Populate the output array with FizzBuzz sequence up to 100
+// Loop 100 times to generate the FizzBuzz sequence.
 for (var i = 0; i < 100; i++) {
-  fizzBuzz();
+  fizzBuzz(); // Call the fizzBuzz function in each iteration.
 }
 
-console.log(output); // Print the entire FizzBuzz sequence
+// Log the final FizzBuzz sequence to the console.
+console.log(output);

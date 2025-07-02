@@ -1,16 +1,20 @@
+<!-- This HTML file creates a responsive pricing table using Flexbox. -->
 <!DOCTYPE html>
 <html>
 
 <head>
   <title>Flexbox Pricing Table</title>
+  <!-- Preconnect and link to Google Fonts for the Sono font. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    /* Sets the default font family for the body. */
     body {
       font-family: 'Sono', sans-serif;
     }
 
+    /* Styles for the pricing container: enables flexbox, centers content, sets height, and adds gap between items. */
     .pricing-container {
       display: flex;
       justify-content: center;
@@ -19,6 +23,7 @@
       gap: 2rem;
     }
 
+    /* Styles for individual pricing plans: sets flex-grow, max-width, padding, background, border-radius, and text alignment. */
     .pricing-plan {
       flex: 1;
       max-width: 400px;
@@ -28,28 +33,33 @@
       text-align: center;
     }
 
+    /* Styles for plan titles: sets font size, font weight, and bottom margin. */
     .plan-title {
       font-size: 24px;
-      font-weight: bold;#
+      font-weight: bold;
       margin-bottom: 10px;
     }
 
+    /* Styles for plan prices: sets font size, font weight, and bottom margin. */
     .plan-price {
       font-size: 48px;
       font-weight: bold;
       margin-bottom: 10px;
     }
 
+    /* Styles for plan features list: removes list style, padding, and margin. */
     .plan-features {
       list-style: none;
       padding: 0;
       margin: 0;
     }
 
+    /* Styles for individual plan features: sets bottom margin. */
     .plan-features li {
       margin-bottom: 20px;
     }
 
+    /* Styles for plan buttons: sets padding, background color, text color, border-radius, and removes border. */
     .plan-button {
       padding: 10px;
       background-color: #ff6600;
@@ -58,6 +68,7 @@
       border: none;
     }
 
+    /* Media query for screens with a maximum width of 1250px: changes flex direction to column and sets height to auto. */
     @media (max-width: 1250px) {
       .pricing-container {
         flex-direction: column;
@@ -68,7 +79,9 @@
 </head>
 
 <body>
+  <!-- Pricing container holding multiple pricing plans. -->
   <div class="pricing-container">
+    <!-- Basic pricing plan. -->
     <div class="pricing-plan">
       <div class="plan-title">Basic</div>
       <div class="plan-price">$11.99/month</div>
@@ -79,6 +92,7 @@
       </ul>
       <button class="plan-button">Sign Up</a>
     </div>
+    <!-- Standard pricing plan. -->
     <div class="pricing-plan">
       <div class="plan-title">Standard</div>
       <div class="plan-price">$19.99/month</div>
@@ -89,6 +103,7 @@
       </ul>
       <button class="plan-button">Sign Up</a>
     </div>
+    <!-- Premium pricing plan. -->
     <div class="pricing-plan">
       <div class="plan-title">Premium</div>
       <div class="plan-price">$49.99/month</div>

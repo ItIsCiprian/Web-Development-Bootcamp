@@ -1,28 +1,35 @@
+/* Styles for images: sets a fixed height and width. */
 img {
   height: 200px;
   width: 200px;
 }
 
+/* Styles for color titles: removes bold formatting. */
 .color-title {
   font-weight: normal;
 }
 
+/* Specific color for the element with ID 'red'. */
 #red {
   color: red;
 }
 
+/* Specific color for the element with ID 'blue'. */
 #blue {
   color: blue;
 }
 
+/* Specific color for the element with ID 'orange'. */
 #orange {
   color: orange;
 }
 
+/* Specific color for the element with ID 'green'. */
 #green {
   color: green;
 }
 
+/* Specific color for the element with ID 'yellow'. */
 #yellow {
   color: yellow;
 }

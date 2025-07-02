@@ -1,3 +1,4 @@
+<!-- This HTML file demonstrates the use of the repeat() function in CSS Grid. -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Repeat Grid</title>
   <style>
+    /* Styles for the grid container: enables grid display, uses repeat() for row and column sizes, and sets auto-rows. */
     .grid-container {
       display: grid;
       grid-template-rows: repeat(2, 200px);
@@ -13,6 +15,7 @@
       grid-auto-rows: 300px;
     }
 
+    /* Styles for grid items: sets font size, background color, border, and text color. */
     .grid-item {
       font-size: 3rem;
       background-color: darkviolet;
@@ -24,6 +27,7 @@
 
 <body>
   <h1>Repeat</h1>
+  <!-- Grid container with five grid items. -->
   <div class="grid-container">
     <div class="grid-item">1</div>
     <div class="grid-item">2</div>

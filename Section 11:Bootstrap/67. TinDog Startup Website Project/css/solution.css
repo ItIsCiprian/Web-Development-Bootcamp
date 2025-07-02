@@ -1,9 +1,11 @@
+/* Styles for the gradient background used in sections. */
 .gradient-background {
   background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
   background-size: 180% 180%;
   animation: gradient-animation 18s ease infinite;
 }
 
+/* Keyframe animation for the gradient background. */
 @keyframes gradient-animation {
   0% {
     background-position: 0% 50%;
@@ -16,12 +18,14 @@
   }
 }
 
+/* Styles for feature icons: sets width, height, and border-radius. */
 .icon-square {
   width: 3rem;
   height: 3rem;
   border-radius: 0.75rem;
 }
 
+/* Styles for the profile image in the testimonial section. */
 .profile-img {
   border-radius: 50%;
   height: 100px;

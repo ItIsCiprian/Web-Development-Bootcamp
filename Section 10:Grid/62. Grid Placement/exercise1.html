@@ -1,3 +1,4 @@
+<!-- This HTML file is an exercise to practice basic grid placement. -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,11 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grid Placement</title>
   <style>
+    /* Resets padding and margin for the body. */
     body {
       padding: 0;
       margin: 0;
     }
 
+    /* Styles for the grid container: sets height, enables grid display, sets gap, and defines column and row templates. */
     .container {
       height: 100vh;
       display: grid;
@@ -19,6 +22,7 @@
       grid-template-rows: 1fr 1fr;
     }
 
+    /* General styles for grid items: sets font size, color, font family, background color, and centers content. */
     .item {
       font-size: 5rem;
       color: white;
@@ -34,6 +38,7 @@
 </head>
 
 <body>
+  <!-- Grid container with three grid items. -->
   <div class="container">
     <div class="item cowboy">🤠</div>
     <div class="item astronaut">👨‍🚀</div>

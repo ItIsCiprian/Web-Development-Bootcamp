@@ -1,9 +1,11 @@
+/* Defines CSS variables for font size, font family, and main color. */
 :root {
   --main-font-size: 5rem; /* Adjustable based on design needs */
   --main-font-family: "Comic Sans MS", cursive, sans-serif;
   --main-color: #ffcc00; /* A yellow shade with better contrast */
 }
 
+/* Styles for elements with the class 'big-title': uses CSS variables for font size, color, and font family. */
 .big-title {
   font-size: var(--main-font-size);
   color: var(--main-color);

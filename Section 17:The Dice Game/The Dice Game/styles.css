@@ -1,19 +1,23 @@
+/* Styles for the main container of the game. */
 .container {
   width: 70%;
   margin: auto;
   text-align: center;
 }
 
+/* Styles for individual dice elements. */
 .dice {
   text-align: center;
   display: inline-block;
 
 }
 
+/* Styles for the body of the page. */
 body {
   background-color: #393E46;
 }
 
+/* Styles for the main heading (h1). */
 h1 {
   margin: 30px;
   font-family: 'Lobster', cursive;
@@ -22,16 +26,19 @@ h1 {
   color: #4ECCA3;
 }
 
+/* Styles for paragraph elements. */
 p {
   font-size: 2rem;
   color: #4ECCA3;
   font-family: 'Indie Flower', cursive;
 }
 
+/* Styles for image elements (dice images). */
 img {
   width: 80%;
 }
 
+/* Styles for the footer. */
 footer {
   margin-top: 5%;
   color: #EEEEEE;

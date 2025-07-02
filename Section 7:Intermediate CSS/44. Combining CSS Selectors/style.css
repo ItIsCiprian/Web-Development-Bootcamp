@@ -1,25 +1,25 @@
-/* Group */
+/* Group selector: applies styles to h1 and h2 elements. */
 h1,
 h2 {
   color: blueviolet;
 }
 
-/* Child */
+/* Child selector: applies styles to p elements that are direct children of elements with the class 'box'. */
 .box > p {
   color: firebrick;
 }
 
-/* Descendent */
+/* Descendant selector: applies styles to li elements that are descendants of elements with the class 'box'. */
 .box li {
   color: blue;
 }
 
-/* Chained */
+/* Chained selector: applies styles to li elements that also have the class 'done'. */
 li.done {
   color: green;
 }
 
-/* Multiple Combiners */
+/* Multiple combiners: applies styles to p elements with the class 'done' that are descendants of ul elements. */
 ul p.done {
   font-size: 0.5rem;
 }

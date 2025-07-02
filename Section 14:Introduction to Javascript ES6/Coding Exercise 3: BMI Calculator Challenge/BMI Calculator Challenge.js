@@ -4,3 +4,7 @@ function bmiCalculator(weight, height) {
     
     // Round the BMI to the nearest whole number
     const roundedBMI = Math.round(bmi);
+
+    // Return the rounded BMI value.
+    return roundedBMI;
+}

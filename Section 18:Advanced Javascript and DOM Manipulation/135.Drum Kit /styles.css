@@ -1,8 +1,10 @@
+/* Styles for the body of the page. */
 body {
   text-align: center;
   background-color: #283149;
 }
 
+/* Styles for the main heading (h1). */
 h1 {
   font-size: 5rem;
   color: #DBEDF3;
@@ -11,11 +13,13 @@ h1 {
 
 }
 
+/* Styles for the footer. */
 footer {
   color: #DBEDF3;
   font-family: sans-serif;
 }
 
+/* Background images for each drum button. */
 .w {
   background-image: url("images/tom1.png");
 }
@@ -44,19 +48,23 @@ footer {
   background-image: url("images/kick.png");
 }
 
+/* Styles for the set of drum buttons. */
 .set {
   margin: 10% auto;
 }
 
+/* Styles for when a drum button is pressed. */
 .pressed {
   box-shadow: 0 3px 4px 0 #DBEDF3;
   opacity: 0.5;
 }
 
+/* Styles for the red class (not used in this project, but present in the original CSS). */
 .red {
   color: red;
 }
 
+/* General styles for drum buttons. */
 .drum {
   outline: none;
   border: 10px solid #404B69;
