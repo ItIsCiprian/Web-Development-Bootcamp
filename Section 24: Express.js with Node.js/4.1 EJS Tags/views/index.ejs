@@ -8,21 +8,23 @@
 </head>
 
 <body>
-  <h1>
+  <h-1>
     <!-- Tite goes here -->
-  </h1>
+     <%= title %>
+  </h-1>
   <p>Current second:
     <!-- Current second goes here -->
+    <%= seconds %>
   </p>
-  if (seconds % 2===0) {
+  <% if (seconds % 2===0) { %>
   <ul>
     <!-- List goes here if current second is even. -->
     <!-- Otherwise it should display the following: -->
     <!-- <p>No items to display</p> -->
   </ul>
-  } else {
+  <% } else { %>
   <p>No items to display</p>
-  }
+  <% } %>
   <p>
     <!-- HTML content goes here -->
   </p>
