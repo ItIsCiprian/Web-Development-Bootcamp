@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
     title: "EJS Tags",
     seconds: new Date().getSeconds(),
     items: ["apple", "banana", "cherry"],
-    htmlContent: "<em>This is some em text</em>",
+    htmlContent: "<em>This is some rendered text</em>",
   };
   res.render("solution.ejs", data);
 });
