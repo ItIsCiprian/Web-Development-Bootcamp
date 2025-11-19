@@ -1,100 +1,213 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git & GitHub Tutorial</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Git & GitHub Tutorial</h1>
-    </header>
-    <main>
-        <section id="intro">
-            <h2>1. Introduction to Version Control and Git</h2>
-            <p><strong>Version control</strong> is a system that records changes to a file or set of files over time so that you can recall specific versions later. It allows you to revert files back to a previous state, revert the entire project back to a previous state, compare changes over time, see who last modified something that might be causing a problem, who introduced an issue and when, and more.</p>
-            <p><strong>Git</strong> is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. Git is easy to learn and has a tiny footprint with lightning fast performance.</p>
-        </section>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Git & GitHub Tutorial</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Git & GitHub Essentials</h1>
+            <p>
+                Learn the core workflows needed to collaborate with confidence.
+            </p>
+        </header>
+        <nav>
+            <a href="#intro">Introduction</a>
+            <a href="#remotes">Remote Repositories</a>
+            <a href="#gitignore">.gitignore</a>
+            <a href="#cloning">Cloning</a>
+            <a href="#branching">Branching & Merging</a>
+            <a href="#forking">Forking & PRs</a>
+        </nav>
+        <main>
+            <section id="intro" class="topic">
+                <div class="topic-header">
+                    <h2>1. Introduction to Version Control & Git</h2>
+                    <span class="tag">Foundations</span>
+                </div>
+                <p>
+                    <strong>Version control</strong> tracks changes to files so
+                    you can access any snapshot in the past, compare revisions,
+                    and collaborate without overwriting each other's work. It is
+                    a safety net and a collaboration tool rolled into one.
+                </p>
+                <p>
+                    <strong>Git</strong> is the most popular distributed version
+                    control system. Every developer has the full history
+                    locally, so you can work offline and synchronize later.
+                    Start new projects with the following commands:
+                </p>
+                <ul class="steps">
+                    <li>
+                        <code>git init</code> — create a repository in the
+                        current folder.
+                    </li>
+                    <li>
+                        <code>git status</code> — inspect tracked/untracked
+                        files.
+                    </li>
+                    <li>
+                        <code>git add &lt;file&gt;</code> — stage work for the
+                        next snapshot.
+                    </li>
+                    <li>
+                        <code>git commit -m "message"</code> — record the staged
+                        snapshot.
+                    </li>
+                    <li>
+                        <code>git log --oneline</code> — review project history.
+                    </li>
+                </ul>
+            </section>
 
-        <section id="cli">
-            <h2>2. Version Control using Git and the Command Line</h2>
-            <p>Git is primarily used via the command line. Here are some of the most basic and essential commands:</p>
-            <ul>
-                <li><code>git init</code>: Initializes a new Git repository in the current directory.</li>
-                <li><code>git status</code>: Displays the state of the working directory and the staging area.</li>
-                <li><code>git add &lt;file&gt;</code>: Adds a file to the staging area, marking it for inclusion in the next commit.</li>
-                <li><code>git commit -m "Your commit message"</code>: Records a snapshot of the staging area to the repository's history.</li>
-                <li><code>git log</code>: Shows the commit history for the current repository.</li>
-            </ul>
-        </section>
+            <section id="remotes" class="topic">
+                <div class="topic-header">
+                    <h2>2. GitHub & Remote Repositories</h2>
+                    <span class="tag">Collaboration</span>
+                </div>
+                <p>
+                    A <strong>remote</strong> is a hosted copy of your
+                    repository. GitHub provides tooling for issues, pull
+                    requests, and social coding on top of Git. Typical remote
+                    workflow:
+                </p>
+                <ol class="steps">
+                    <li>
+                        <code>git remote add origin &lt;url&gt;</code> — link
+                        your local repo to the hosted one.
+                    </li>
+                    <li>
+                        <code>git push -u origin main</code> — publish local
+                        commits to the remote branch and set upstream tracking.
+                    </li>
+                    <li>
+                        <code>git pull</code> (or <code>git fetch</code> +
+                        <code>git merge</code>) — bring down teammates' changes.
+                    </li>
+                </ol>
+                <p>
+                    Keep local and remote histories aligned to avoid diverging
+                    work and painful conflicts.
+                </p>
+            </section>
 
-        <section id="remotes">
-            <h2>3. GitHub and Remote Repositories</h2>
-            <p><strong>GitHub</strong> is a web-based platform that provides hosting for software development and version control using Git. It offers all of the distributed version control and source code management (SCM) functionality of Git as well as adding its own features.</p>
-            <p>A <strong>remote repository</strong> is a version of your project that is hosted on the internet or network somewhere. You can have several of them, each of which generally is either read-only or read/write for you. Collaborating with others involves managing these remote repositories and pushing and pulling data to and from them when you need to share work.</p>
-            <ul>
-                <li><code>git remote add origin &lt;repository_url&gt;</code>: Connects your local repository to a remote repository on GitHub.</li>
-                <li><code>git push -u origin main</code>: Pushes your committed changes to the remote repository.</li>
-                <li><code>git pull</code>: Fetches and merges changes from the remote repository to your local repository.</li>
-            </ul>
-        </section>
-
-        <section id="gitignore">
-            <h2>4. .gitignore</h2>
-            <p>A <code>.gitignore</code> file is a text file that tells Git which files or folders to ignore in a project. This is typically used for files that are generated automatically, such as build artifacts, log files, or files containing sensitive information like API keys.</p>
-            <p>Each line in a <code>.gitignore</code> file specifies a pattern. For example:</p>
-            <pre>
-# Ignore node_modules directory
+            <section id="gitignore" class="topic">
+                <div class="topic-header">
+                    <h2>3. Managing a <code>.gitignore</code></h2>
+                    <span class="tag">Housekeeping</span>
+                </div>
+                <p>
+                    Use <code>.gitignore</code> to exclude generated artifacts,
+                    secrets, or anything that does not belong in version
+                    control. Patterns can target files, directories, or
+                    extensions.
+                </p>
+                <pre><code># Ignore dependencies
 node_modules/
 
-# Ignore .log files
+# Ignore build output
+dist/
+
+# Ignore local config
 *.log
+*.local.json</code></pre>
+                <p>
+                    Commit the <code>.gitignore</code> itself so that every
+                    collaborator benefits from the same clean history.
+                </p>
+            </section>
 
-# Ignore a specific file
-config.local.js
-            </pre>
-        </section>
+            <section id="cloning" class="topic">
+                <div class="topic-header">
+                    <h2>4. Cloning Existing Projects</h2>
+                    <span class="tag">Getting Started</span>
+                </div>
+                <p>
+                    <strong>Cloning</strong> downloads an entire repository,
+                    including history, branches, and tags. This is how you begin
+                    collaborating on an existing codebase.
+                </p>
+                <pre><code>git clone https://github.com/user/project.git
+cd project
+git status</code></pre>
+                <p>
+                    After cloning, configure remotes if needed and create your
+                    own branches to make changes safely.
+                </p>
+            </section>
 
-        <section id="cloning">
-            <h2>5. Cloning</h2>
-            <p><strong>Cloning</strong> is the process of creating a local copy of a remote repository. When you clone a repository, you get the entire history of the project, not just the current state of the files.</p>
-            <p>To clone a repository, you use the <code>git clone</code> command followed by the URL of the repository:</p>
-            <pre><code>git clone &lt;repository_url&gt;</code></pre>
-        </section>
+            <section id="branching" class="topic">
+                <div class="topic-header">
+                    <h2>5. Branching & Merging</h2>
+                    <span class="tag">Parallel Work</span>
+                </div>
+                <p>
+                    Branches let you isolate work. The <code>main</code>/<code
+                        >master</code
+                    >
+                    branch remains stable while you experiment elsewhere.
+                </p>
+                <ul class="steps">
+                    <li>
+                        <code>git branch feature/login</code> — create a branch
+                        pointer.
+                    </li>
+                    <li>
+                        <code>git switch feature/login</code> or
+                        <code>git checkout feature/login</code> — move to that
+                        branch.
+                    </li>
+                    <li>
+                        <code>git merge feature/login</code> — integrate
+                        finished work back into the target branch.
+                    </li>
+                </ul>
+                <p>
+                    Resolve merge conflicts by editing the files, staging the
+                    fixes, and committing. Consider rebasing for a linear
+                    history when collaborating closely.
+                </p>
+            </section>
 
-        <section id="branching">
-            <h2>6. Branching and Merging</h2>
-            <p><strong>Branching</strong> in Git allows you to diverge from the main line of development and continue to do work without messing with that main line. This is especially useful for developing new features or fixing bugs.</p>
-            <ul>
-                <li><code>git branch &lt;branch_name&gt;</code>: Creates a new branch.</li>
-                <li><code>git checkout &lt;branch_name&gt;</code>: Switches to the specified branch.</li>
-                <li><code>git checkout -b &lt;branch_name&gt;</code>: Creates a new branch and switches to it in one command.</li>
-            </ul>
-            <p><strong>Merging</strong> is the process of integrating the changes from one branch into another. For example, once a new feature is complete, you would merge the feature branch back into the main branch.</p>
-            <ul>
-                <li><code>git merge &lt;branch_name&gt;</code>: Merges the specified branch's history into the current branch.</li>
-            </ul>
-        </section>
-
-        <section id="forking">
-            <h2>7. Forking and Pull Requests</h2>
-            <p><strong>Forking</strong> is similar to cloning, but it's done on the server side (e.g., on GitHub). A fork is a copy of a repository that you manage. Forking a repository allows you to freely experiment with changes without affecting the original project.</p>
-            <p>A <strong>Pull Request (PR)</strong> is a way to propose your changes to the original repository. You create a pull request to let the original repository's owner know that you have changes you'd like them to consider. If they approve the pull request, your changes will be merged into the original repository.</p>
-            <p>The general workflow is:</p>
-            <ol>
-                <li>Fork the repository on GitHub.</li>
-                <li>Clone your forked repository to your local machine.</li>
-                <li>Create a new branch for your changes.</li>
-                <li>Make your changes and commit them.</li>
-                <li>Push your changes to your forked repository on GitHub.</li>
-                <li>Create a pull request from your forked repository to the original repository.</li>
-            </ol>
-        </section>
-    </main>
-    <footer>
-        <p>End of Tutorial</p>
-    </footer>
-</body>
+            <section id="forking" class="topic">
+                <div class="topic-header">
+                    <h2>6. Forking & Pull Requests</h2>
+                    <span class="tag">Open Source</span>
+                </div>
+                <p>
+                    <strong>Forking</strong> creates your own remote copy of
+                    someone else's repository. You can then propose changes via
+                    a pull request (PR) without write access to the original
+                    repo.
+                </p>
+                <ol class="steps">
+                    <li>
+                        Fork on GitHub, then <code>git clone</code> your fork
+                        locally.
+                    </li>
+                    <li>
+                        Add the original repo as <code>upstream</code> with
+                        <code>git remote add upstream &lt;url&gt;</code>.
+                    </li>
+                    <li>
+                        Create a feature branch, commit, and
+                        <code>git push origin feature-branch</code>.
+                    </li>
+                    <li>
+                        Open a PR comparing your branch to the original
+                        project's branch. Provide context and request review.
+                    </li>
+                </ol>
+                <p>
+                    Keep forks updated by fetching from
+                    <code>upstream</code> and rebasing or merging regularly.
+                </p>
+            </section>
+        </main>
+        <footer>
+            <p>You're ready to version, collaborate, and contribute.</p>
+        </footer>
+    </body>
 </html>
