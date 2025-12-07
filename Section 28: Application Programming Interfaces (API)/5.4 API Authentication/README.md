@@ -90,3 +90,4 @@ npm run dev
 - `GET /apiKey?score=5` - Fetch secrets with API key
 - `GET /bearerToken?id=2` - Fetch secret with bearer token
 
+

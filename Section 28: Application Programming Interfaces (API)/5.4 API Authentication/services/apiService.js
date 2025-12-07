@@ -78,3 +78,4 @@ export async function fetchSecretWithBearerToken(secretId = 2) {
   return response.data;
 }
 
+
