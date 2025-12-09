@@ -1,44 +1,70 @@
 import express from "express";
-import { config } from "./config/config.js";
-import authRoutes from "./routes/authRoutes.js";
-import { errorHandler } from "./middleware/errorHandler.js";
-import morgan from "morgan";
-import helmet from "helmet";
+import axios from "axios";
 
 const app = express();
+const port = 3000;
+const API_URL = "https://secrets-api.appbrewery.com";
 
-// Security Middleware
-app.use(helmet());
-app.use(morgan("combined"));
+// TODO: Replace the values below with your own before running this file.
+const yourUsername = "ItISCiprian";
+const yourPassword = "P@ssw0rd123";
+const yourAPIKey = "2233445566778899";
+const yourBearerToken = "1234567890";
 
-// Body Parser Middleware
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-// View Engine Setup
-app.set("view engine", "ejs");
-app.set("views", "./views");
-
-// Routes
-app.use("/", authRoutes);
-
-// 404 Handler (before error middleware)
-app.use((req, res) => {
-  res.status(404).json({ error: "Route not found" });
+app.get("/", (req, res) => {
+  res.render("index.ejs", { content: "API Response." });
 });
 
-// Error handling middleware (must be last)
-app.use(errorHandler);
-
-// Start the server
-const PORT = config.port || 3000;
-app.listen(PORT, () => {
-  console.log(`🚀 Server is running on http://localhost:${PORT}`);
-  console.log(`📝 Environment: ${process.env.NODE_ENV || "development"}`);
+app.get("/noAuth", async (req, res) => {
+  try {
+    const result = await axios.get(API_URL + "/random");
+    res.render("index.ejs", { content: JSON.stringify(result.data) });
+  } catch (error) {
+    res.status(404).send(error.message);
+  }
 });
 
-// Graceful shutdown
-process.on("SIGTERM", () => {
-  console.log("SIGTERM received, shutting down gracefully");
-  process.exit(0);
+app.get("/basicAuth", async (req, res) => {
+  try {
+    const result = await axios.get(API_URL + "/all?page=2", {
+      auth: {
+        username: yourUsername,
+        password: yourPassword,
+      },
+    });
+    res.render("index.ejs", { content: JSON.stringify(result.data) });
+  } catch (error) {
+    res.status(404).send(error.message);
+  }
+});
+
+app.get("/apiKey", async (req, res) => {
+  try {
+    const result = await axios.get(API_URL + "/filter", {
+      params: {
+        score: 5,
+        apiKey: yourAPIKey,
+      },
+    });
+    res.render("index.ejs", { content: JSON.stringify(result.data) });
+  } catch (error) {
+    res.status(404).send(error.message);
+  }
+});
+
+const config = {
+  headers: { Authorization: `Bearer ${yourBearerToken}` },
+};
+
+app.get("/bearerToken", async (req, res) => {
+  try {
+    const result = await axios.get(API_URL + "/secrets/2", config);
+    res.render("index.ejs", { content: JSON.stringify(result.data) });
+  } catch (error) {
+    res.status(404).send(error.message);
+  }
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
