@@ -1,3 +1,7 @@
+-- Section 32: SQL - CRUD, Relationships, Foreign Keys, Inner Joins
+-- Aligned with The Complete Web Development Bootcamp (Udemy) lecture 12385674
+-- See CRUD.txt for Create / Read / Update / Destroy overview.
+
 -- create customers table
 CREATE TABLE customers (
   id INT,
@@ -82,4 +86,4 @@ INNER JOIN customers ON orders.customer_id = customers.id;
 --join orders and products table
 SELECT orders.order_number, products.name, products.price, products.stock
 FROM orders
-INNER JOIN products ON product_id = products.id;
+INNER JOIN products ON orders.product_id = products.id;
