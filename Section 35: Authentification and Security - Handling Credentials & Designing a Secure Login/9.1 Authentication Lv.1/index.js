@@ -14,6 +14,7 @@ const db = new pg.Client({
 });
 db.connect();
 
+app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
