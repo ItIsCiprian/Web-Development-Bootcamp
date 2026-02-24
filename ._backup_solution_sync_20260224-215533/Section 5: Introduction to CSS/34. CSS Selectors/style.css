@@ -1,0 +1,31 @@
+/* Styles for ordered lists. */
+ol {
+  margin-left: -40px;
+  margin-top: -20px;
+  list-style-position: inside;
+}
+
+/* All paragraph tags are red. */
+p {
+  color: red;
+}
+
+/* Elements with the class "note" have a font size of 20px. */
+.note {
+  font-size: 20px;
+}
+
+/* The element with the ID "id-selector-demo" is green. */
+#id-selector-demo {
+  color: green;
+}
+
+/* List items with a value attribute of "4" are blue. */
+li[value="4"] {
+  color: blue;
+}
+
+/* All elements are centered. */
+* {
+  text-align: center;
+}
